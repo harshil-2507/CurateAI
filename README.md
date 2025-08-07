@@ -1,6 +1,6 @@
-# SalesmanBot – AI Shopping Assistant for Every Product
+# SalesmanBot – AI Shopping Assistant
 
-A powerful Chrome extension that acts as your personal AI assistant for discovering and comparing **any products** on leading e-commerce websites such as Amazon and Flipkart. Whether you’re shopping for PC components, smartphones, appliances, or fashion, SalesmanBot brings AI-powered recommendations and smart filtering to elevate your online shopping experience.
+A powerful Chrome extension that acts as your personal AI assistant for discovering and comparing **different products** on leading e-commerce websites such as Amazon, Flipkart, Walmart. Whether you’re shopping for PC components, smartphones, appliances, or fashion, SalesmanBot brings AI-powered recommendations and smart filtering to elevate your online shopping experience.
 
 ---
 
