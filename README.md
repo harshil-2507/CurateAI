@@ -1,167 +1,218 @@
-# SalesmanBot - AI PC Assistant
+# SalesmanBot – AI Shopping Assistant for Every Product
 
-A powerful Chrome extension that acts as your personal AI salesman for finding PC parts and builds on e-commerce websites like Amazon and Flipkart.
+A powerful Chrome extension that acts as your personal AI assistant for discovering and comparing **any products** on leading e-commerce websites such as Amazon and Flipkart. Whether you’re shopping for PC components, smartphones, appliances, or fashion, SalesmanBot brings AI-powered recommendations and smart filtering to elevate your online shopping experience.
+
+---
 
 ## Features
 
-🤖 **AI-Powered Recommendations**: Uses Google's Gemini-1.5-flash to analyze products and provide intelligent recommendations
-💰 **Budget-Aware Filtering**: Understands budget constraints and filters products accordingly
-🔍 **Smart Query Parsing**: Parses natural language queries to understand specs, brands, and requirements
-⚡ **Real-time Analysis**: Extracts and analyzes products from current page
-🛒 **Multi-Site Support**: Works on Amazon India, Amazon.com, and Flipkart
-📊 **Detailed Product Info**: Shows ratings, specs, compatibility notes, and pros/cons
+- 🤖 **AI-Powered Recommendations**: Uses Google's Gemini-1.5-flash to analyze and intelligently recommend the best products across categories  
+- 💰 **Budget-Aware Filtering**: Understands your budget and narrows down the choices accordingly  
+- 🔍 **Smart Query Parsing**: Parses your natural language queries to capture specs, brands, preferences, or intended use  
+- ⚡ **Real-time Analysis**: Extracts and analyzes product listings on any supported e-commerce page  
+- 🛒 **Multi-Site Support**: Works seamlessly on Amazon India, Amazon.com, and Flipkart  
+- 📊 **Detailed Product Info**: Shows ratings, key specifications, compatibility/fit notes, and pros & cons—even for non-tech products
+
+---
 
 ## Installation
 
 1. **Download the Extension**
-   - Clone or download this repository
-   - Ensure all files are in the `Salesman Bot Extension` folder
+    - Clone or download this repository
+    - Ensure all files are in the `Salesman Bot Extension` folder
 
 2. **Load in Chrome**
-   - Open Chrome and go to `chrome://extensions/`
-   - Enable "Developer mode" (toggle in top-right)
-   - Click "Load unpacked" and select the extension folder
-   - The SalesmanBot icon should appear in your toolbar
+    - Open Chrome and go to `chrome://extensions/`
+    - Enable "Developer mode" (toggle in top-right)
+    - Click "Load unpacked" and select the extension folder
+    - The SalesmanBot icon should appear in your toolbar
 
 3. **Get Gemini API Key**
-   - Visit [Google AI Studio](https://aistudio.google.com/app/apikey)
-   - Create a free API key
-   - Copy the key for setup
+    - Visit Google AI Studio and create a free API key
+    - Copy the key for setup
+
+---
 
 ## Setup & Usage
 
 ### Initial Setup
-1. **Navigate to a supported site**: Amazon India, Amazon.com, or Flipkart
-2. **Click the extension icon** to open the popup
-3. **Enter your Gemini API key** when prompted
-4. **Click "Setup AI"** to enable AI-powered recommendations
+
+1. **Navigate to a Supported Site**: Amazon India, Amazon.com, or Flipkart  
+2. **Click the Extension Icon** to open the popup  
+3. **Enter your Gemini API key** when prompted  
+4. **Click "Setup AI"** to enable AI-powered recommendations  
 
 ### Using the Extension
-1. **Go to a product listing page** (search results, category pages)
+
+1. **Go to a product listing page** (e.g., search results or category pages)
 2. **Open the extension popup**
-3. **Type your query** in natural language, for example:
-   - "gaming PC under ₹70,000 with 16GB RAM and SSD"
-   - "Intel processor for video editing under ₹25,000"
-   - "RTX graphics card for 1080p gaming"
-   - "laptop for programming under ₹60,000"
+3. **Type your query in natural language**, e.g.:
+    - For any product:
+        - `wireless headphones under ₹5,000 with good battery life`
+        - `water bottle, BPA-free, 1 liter`
+        - `sofa set for small living room under ₹35,000`
+    - For PC category (example):
+        - `gaming PC under ₹70,000 with 16GB RAM and SSD`
+        - `Intel processor for video editing under ₹25,000`
 
 ### Query Examples
-- **Budget queries**: "under ₹50,000", "around 1 lakh", "budget of ₹75k"
-- **Spec queries**: "16GB RAM", "1TB SSD", "Intel Core i5", "RTX 3060"
-- **Purpose queries**: "gaming", "video editing", "programming", "office work"
-- **Brand queries**: "Intel", "AMD", "ASUS", "MSI", "Corsair"
+
+- **Budget queries**: `under ₹1,000`, `around 30k`, `budget of ₹500`
+- **Specification queries**: `noise cancellation`, `1TB storage`, `4-star energy rating`
+- **Purpose queries**: `for traveling`, `kids`, `for gaming`, `work from home`
+- **Brand queries**: `Sony`, `Apple`, `Prestige`, `Intel`, `ASUS`
+- **Category queries**: `headphones`, `washing machine`, `PC components`, `smartphone`, `kitchen appliances`
+
+---
 
 ## How It Works
 
 ### 1. Product Extraction
-- **Smart Selectors**: Uses advanced CSS selectors to extract product information
-- **Multi-Site Support**: Different extraction logic for Amazon and Flipkart
-- **Rich Data**: Extracts title, price, rating, images, specs, and links
+
+- **Smart Selectors**: Uses advanced CSS selectors to extract all relevant product info on listing pages
+- **Multi-Site Support**: Extraction logic custom-tailored for Amazon and Flipkart
+- **Rich Data**: Extracts title, price, ratings, images, salient features/specs, and links
 
 ### 2. Query Parsing
-- **Natural Language Processing**: Understands budget, specs, brands, and purpose
-- **Budget Recognition**: Handles various formats (₹50k, 1 lakh, under 75000)
-- **Spec Extraction**: Identifies RAM, storage, processors, graphics cards
-- **Brand Detection**: Recognizes major PC component brands
+
+- **Natural Language Processing**: Understands your goals, budget, important specs, preferred brands, and intended use (across all product categories)
+- **Budget Recognition**: Handles formats like `₹2,000`, `under 1 lakh`, `50 dollars`
+- **Spec Extraction**: Identifies unique product properties (color, storage, material, warranty, etc.—relevant to category)
+- **Brand Detection**: Recognizes brands across different retail categories
 
 ### 3. AI Analysis
-- **Gemini Integration**: Uses Google's Gemini-1.5-flash for intelligent analysis
-- **Compatibility Checking**: Warns about potential compatibility issues
-- **Score-based Ranking**: Provides match scores for each product
-- **Detailed Explanations**: Explains why products are recommended
+
+- **Gemini Integration**: Uses Google Gemini-1.5-flash for deep product comparison and recommendation logic
+- **Category Adaptation**: Highlights relevant pros/cons per product category  
+    - For PCs: Compatibility warnings, performance notes  
+    - For apparel: Size/fit tips  
+    - For appliances: Energy efficiency, warranty info  
+- **Score-based Ranking**: Evaluates matches for your query and requirements
+- **Explanations**: Tells you *why* a product is recommended
 
 ### 4. Smart Filtering
-- **Budget Filtering**: Respects budget constraints with tolerance
-- **Category Matching**: Filters by component categories
-- **Brand Preferences**: Prioritizes preferred brands
-- **Spec Requirements**: Ensures minimum specifications are met
+
+- **Budget Filtering**: Respects your price constraints, with intelligent tolerance
+- **Category Matching**: Detects and filters across virtually any product type from electronics to home goods to apparel and more
+- **Brand Preferences**: Prioritizes any named brands in your query
+- **Spec Requirements**: Ensures products meet minimum user-specified criteria
+
+---
 
 ## File Structure
 
 ```
 Salesman Bot Extension/
-├── manifest.json          # Extension configuration
-├── popup.html             # Extension popup interface
-├── popup.js              # Popup logic and UI handling
-├── content.js            # Main content script
-├── background.js         # Background service worker
-├── style.css             # Popup styling
-├── Salesman bot.png      # Extension icon
+├── manifest.json # Extension configuration
+├── popup.html # Extension popup interface
+├── popup.js # Popup logic and UI handling
+├── content.js # Main content script
+├── background.js # Background service worker
+├── style.css # Popup styling
+├── Salesman bot.png # Extension icon
 └── utils/
-    ├── productExtractor.js   # Product extraction logic
-    ├── queryParser.js        # Query parsing and analysis
-    └── aiService.js          # Gemini AI integration
+├── productExtractor.js # Product extraction/adaptation logic
+├── queryParser.js # Smart query parsing and analysis
+└── aiService.js # Gemini AI integration
 ```
+
+
+---
 
 ## Technical Details
 
 ### Supported Sites
+
 - **Amazon India** (`*.amazon.in`)
 - **Amazon.com** (`*.amazon.com`)
 - **Flipkart** (`*.flipkart.com`)
+- *Extendable* to more sites (see below)
 
 ### Permissions Required
+
 - `scripting`: To inject content scripts
-- `activeTab`: To access current tab content
-- `storage`: To save API key and preferences
-- `notifications`: To show helpful notifications
-- `contextMenus`: For right-click menu options
+- `activeTab`: To access content on your active tab
+- `storage`: To securely save your API key and preferences
+- `notifications`: For contextual product/feature notifications
+- `contextMenus`: Power right-click options for additional actions
 
 ### API Usage
-- **Google Gemini API**: For AI-powered product analysis
-- **Free Tier Available**: Generous free quotas for personal use
-- **Secure Storage**: API key stored locally in Chrome storage
+
+- Utilizes **Google Gemini API** for AI-powered product analysis and conversation
+- **Free tier available** (ideal for personal and educational use)
+- API key is securely stored *locally* in Chrome
+
+---
 
 ## Privacy & Security
 
-- **Local Processing**: All data processing happens locally
-- **No Data Collection**: Extension doesn't collect or store personal data
-- **Secure API Key Storage**: API key stored in Chrome's secure storage
-- **No External Tracking**: No analytics or tracking scripts
+- **Local, Private Processing**: All your data stays on your device
+- **No Data Collection**: Your browsing and queries aren’t collected or stored by the extension authors
+- **Secure API Key Handling**: Stored only in Chrome’s secure storage
+- **No External Analytics**: No tracking or analytics scripts
+
+---
 
 ## Troubleshooting
 
 ### Content Script Not Loading
-1. **Check URL**: Ensure you're on Amazon or Flipkart product listing pages (search results)
-2. **Reload Extension**: Go to `chrome://extensions/` and click reload
-3. **Refresh Page**: Reload the e-commerce page after reloading the extension
-4. **Check Console**: Open DevTools (F12) → Console tab to see debug messages
-5. **Try Different Pages**: Search for products like "laptop" or "gaming pc" on Amazon/Flipkart
+
+1. **Check Supported Site**: Make sure you’re on an Amazon or Flipkart product search/category page
+2. **Reload the Extension**: Use `chrome://extensions/` → reload SalesmanBot
+3. **Refresh the Page**: After reloading the extension, reload your e-commerce site page
+4. **Console Logs**: Open DevTools (F12) and inspect the Console tab for clues
+5. **Try Various Pages**: Some listings may work better than others due to layout differences
 
 ### AI Not Working
-1. **Verify API Key**: Ensure you've entered a valid Gemini API key
-2. **Check Quota**: Verify your API quota hasn't been exceeded
-3. **Network Issues**: Check internet connection and try again
+
+1. **API Key**: Ensure your Gemini API key is entered and valid
+2. **API Quota**: Check you haven’t exceeded your free quota
+3. **Network**: Confirm your device has a working internet connection
 
 ### No Products Found
-1. **Navigate to Search Results**: Go to product search pages, not product detail pages
-2. **Wait for Page Load**: Let the page fully load before using extension  
-3. **Try Different Search Terms**: Search for "laptop", "pc components", etc.
-4. **Check Browser Console**: Look for extraction debug messages
+
+1. **Be on Listing/Search Pages**: The extension doesn’t extract from individual product detail pages
+2. **Let Listing Load**: Wait until all products are visible before activating the extension
+3. **Try Alternate Queries or Categories**
+4. **Check Browser Console for Debug Messages**
+
+---
 
 ## Development
 
 ### Adding New Sites
-1. **Update Manifest**: Add new URL patterns to `matches` and `host_permissions`
-2. **Extend ProductExtractor**: Add selectors for the new site
-3. **Test Thoroughly**: Ensure all functionality works on new site
+
+1. **Update Manifest**: Add new URL patterns under `matches` and `host_permissions`
+2. **Extend ProductExtractor**: Add/modify selectors to support product listings on new sites
+3. **Test Across Categories**: Ensure it works for your expanded range of product types
 
 ### Customizing AI Prompts
-- **Edit `aiService.js`**: Modify the `buildPrompt` method
-- **Adjust Parameters**: Change temperature, max tokens for different responses
-- **Add New Features**: Extend the analysis capabilities
+
+- **Edit `aiService.js`**: Improve or specialize the `buildPrompt` logic for various categories
+- **Tweak AI Parameters**: Adjust temperature/max tokens for answer style and length
+- **Feature Extensions**: Add new product category-specific logic
+
+---
 
 ## Support
 
-For issues, feature requests, or contributions:
-1. **Check Console**: Look for error messages in browser console
-2. **Reload Extension**: Try reloading the extension first
-3. **Test on Different Pages**: Some pages may have different layouts
+If you experience issues or have suggestions:
+
+1. **Check the Console**: Error messages will often guide you
+2. **Reload the Extension**
+3. **Try on Different Pages or Product Categories**
+4. **Open an Issue or Request on the GitHub Repository**
+
+---
 
 ## License
 
-This project is for educational and personal use. Ensure compliance with website terms of service when using.
+This project is for **educational and personal use** only. Please ensure you comply with each e-commerce site’s terms of service when using this extension.
 
 ---
+
+**Happy Shopping with AI! 🛍️🛠️**  
+
+
 
 **Happy PC Building! 🛠️**
