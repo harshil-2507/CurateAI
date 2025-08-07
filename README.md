@@ -212,7 +212,3 @@ This project is for **educational and personal use** only. Please ensure you com
 ---
 
 **Happy Shopping with AI! 🛍️🛠️**  
-
-
-
-**Happy PC Building! 🛠️**
